@@ -2,13 +2,36 @@
 
 A reconstruction of a robot car project I built in secondary school, focusing on visual line following, PID steering, and traffic-sign recognition.
 
-**Status:** Repository initialized. The new implementation, tests, and demonstrations are not yet available.
+**Status:** Project layers and a course concept are in place. Current focus: visual lane perception. Functional code, tests, and driving demonstrations are not yet available.
 
 ## Background
 
 The original project used existing libraries to implement line following, PID control, and traffic-sign recognition on a physical robot car. The original source code and hardware materials are no longer available.
 
 This repository will contain a new implementation based on that experience. It is not an archive of the original project. Features and results from the reconstruction will be documented as they are implemented and tested.
+
+## Course Concept
+
+![Gray road with white boundaries, grass, a crossing, a traffic light, and a school sign](assets/concepts/track-concept-v1.png)
+
+AI-generated planning reference, not a calibrated map or a photograph of the original project. See [asset notes and generation prompt](assets/concepts/README.md). The simulation will generate its own local vehicle-camera views.
+
+## Repository Structure
+
+```text
+assets/concepts/           Approved course image and provenance
+configs/                   Future detector, control, and scenario settings
+docs/architecture.md       Data flow, boundaries, and development order
+src/robot_car/
+    perception/            Lane, crossing, light, and sign detection
+    behavior/              Driving states, priorities, and timers
+    control/               PID steering and speed commands
+    simulation/            Vehicle model, scene, and camera rendering
+    visualization/         Overlays and diagnostics
+tests/                     Validation plan; tests follow implementation
+```
+
+Each layer currently contains a README defining its responsibility. Start with [perception](src/robot_car/perception/README.md); see the [architecture guide](docs/architecture.md) for interfaces and staged development.
 
 ## Planned Scope
 
@@ -43,11 +66,12 @@ Camera frame / recorded video / simulated view
 ## Roadmap
 
 - [x] Initialize the repository and document the reconstruction scope.
+- [x] Add the course concept and define implementation layers.
 - [ ] Select reusable libraries and appropriately licensed input materials.
 - [ ] Build a reproducible line-following perception demo.
 - [ ] Implement and test the PID controller.
-- [ ] Add traffic-sign recognition and a behavior state machine.
 - [ ] Integrate a simple vehicle simulation and evaluate tracking behavior.
+- [ ] Add crossing, traffic-light, and sign recognition, then a behavior state machine.
 - [ ] Publish setup instructions, a demonstration, and measured results.
 
 ## Attribution
