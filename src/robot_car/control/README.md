@@ -1,9 +1,9 @@
 # Control
 
-**Planned.** Converts the lane estimate and behavior's target speed into vehicle commands.
+**Implemented:** `SteeringPID`, `PIDConfig`, and `ControlCommand` in `pid.py`.
 
-Implement steering PID with an explicit time step, documented error sign and units, output limits, and a deliberate reset policy when stopping or losing the lane. Speed commands must respect the behavior layer's stop and slow states.
+Converts normalized lane error into steering in [-1, 1], positive right. Explicit time steps are in seconds. Output limiting, bounded integration with conditional anti-windup, stop/reset handling, and a direct `LaneResult` adapter are tested. Initial gains are not tuned for a vehicle.
 
-Test zero error, error sign, changing time steps, saturation, and recovery. PID output alone is not evidence of successful tracking; that requires a closed-loop simulation or physical test.
+See the [control guide](../../../docs/control.md) for configuration, an executable example, and the integration contract. The future vehicle adapter must enforce stop requests and convert normalized steering into its actuator units. Speed regulation and closed-loop driving remain planned.
 
-Control must not classify signs, start crossing timers, or access simulator ground truth.
+Control does not classify signs, start crossing timers, or access simulator ground truth.
