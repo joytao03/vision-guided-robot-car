@@ -1,0 +1,365 @@
+{
+  "valid": true,
+  "status": "ok",
+  "coverage": 0.8805970149253731,
+  "lateral_error_px": 1.75,
+  "lateral_error_normalized": 0.00782122905027933,
+  "reference_y": 407.0,
+  "coordinate_system": "image pixels; x right, y down; positive error means road center is right of image center",
+  "samples": [
+    {
+      "y": 455.0,
+      "left_x": 74.5,
+      "right_x": 565.0,
+      "center_x": 319.75
+    },
+    {
+      "y": 451.0,
+      "left_x": 76.5,
+      "right_x": 563.0,
+      "center_x": 319.75
+    },
+    {
+      "y": 447.0,
+      "left_x": 78.0,
+      "right_x": 562.0,
+      "center_x": 320.0
+    },
+    {
+      "y": 443.0,
+      "left_x": 80.0,
+      "right_x": 560.0,
+      "center_x": 320.0
+    },
+    {
+      "y": 439.0,
+      "left_x": 82.0,
+      "right_x": 558.0,
+      "center_x": 320.0
+    },
+    {
+      "y": 435.0,
+      "left_x": 84.0,
+      "right_x": 557.0,
+      "center_x": 320.5
+    },
+    {
+      "y": 431.0,
+      "left_x": 86.0,
+      "right_x": 555.0,
+      "center_x": 320.5
+    },
+    {
+      "y": 427.0,
+      "left_x": 87.5,
+      "right_x": 553.0,
+      "center_x": 320.25
+    },
+    {
+      "y": 423.0,
+      "left_x": 89.5,
+      "right_x": 552.0,
+      "center_x": 320.75
+    },
+    {
+      "y": 419.0,
+      "left_x": 91.5,
+      "right_x": 550.0,
+      "center_x": 320.75
+    },
+    {
+      "y": 415.0,
+      "left_x": 93.5,
+      "right_x": 549.0,
+      "center_x": 321.25
+    },
+    {
+      "y": 411.0,
+      "left_x": 95.5,
+      "right_x": 547.0,
+      "center_x": 321.25
+    },
+    {
+      "y": 407.0,
+      "left_x": 97.5,
+      "right_x": 545.0,
+      "center_x": 321.25
+    },
+    {
+      "y": 403.0,
+      "left_x": 99.5,
+      "right_x": 544.0,
+      "center_x": 321.75
+    },
+    {
+      "y": 399.0,
+      "left_x": 101.5,
+      "right_x": 542.0,
+      "center_x": 321.75
+    },
+    {
+      "y": 395.0,
+      "left_x": 103.5,
+      "right_x": 541.0,
+      "center_x": 322.25
+    },
+    {
+      "y": 391.0,
+      "left_x": 105.5,
+      "right_x": 539.0,
+      "center_x": 322.25
+    },
+    {
+      "y": 387.0,
+      "left_x": 107.5,
+      "right_x": 538.0,
+      "center_x": 322.75
+    },
+    {
+      "y": 383.0,
+      "left_x": 109.5,
+      "right_x": 536.0,
+      "center_x": 322.75
+    },
+    {
+      "y": 379.0,
+      "left_x": 111.5,
+      "right_x": 535.0,
+      "center_x": 323.25
+    },
+    {
+      "y": 375.0,
+      "left_x": 113.5,
+      "right_x": 533.0,
+      "center_x": 323.25
+    },
+    {
+      "y": 371.0,
+      "left_x": 115.5,
+      "right_x": 532.0,
+      "center_x": 323.75
+    },
+    {
+      "y": 367.0,
+      "left_x": 117.5,
+      "right_x": 530.5,
+      "center_x": 324.0
+    },
+    {
+      "y": 363.0,
+      "left_x": 119.5,
+      "right_x": 529.0,
+      "center_x": 324.25
+    },
+    {
+      "y": 359.0,
+      "left_x": 122.0,
+      "right_x": 528.0,
+      "center_x": 325.0
+    },
+    {
+      "y": 355.0,
+      "left_x": 124.0,
+      "right_x": 526.0,
+      "center_x": 325.0
+    },
+    {
+      "y": 351.0,
+      "left_x": 126.0,
+      "right_x": 525.0,
+      "center_x": 325.5
+    },
+    {
+      "y": 339.0,
+      "left_x": 132.5,
+      "right_x": 521.0,
+      "center_x": 326.75
+    },
+    {
+      "y": 335.0,
+      "left_x": 134.5,
+      "right_x": 519.5,
+      "center_x": 327.0
+    },
+    {
+      "y": 331.0,
+      "left_x": 137.0,
+      "right_x": 518.0,
+      "center_x": 327.5
+    },
+    {
+      "y": 327.0,
+      "left_x": 139.5,
+      "right_x": 517.0,
+      "center_x": 328.25
+    },
+    {
+      "y": 323.0,
+      "left_x": 141.5,
+      "right_x": 515.5,
+      "center_x": 328.5
+    },
+    {
+      "y": 319.0,
+      "left_x": 143.5,
+      "right_x": 514.0,
+      "center_x": 328.75
+    },
+    {
+      "y": 303.0,
+      "left_x": 152.5,
+      "right_x": 509.0,
+      "center_x": 330.75
+    },
+    {
+      "y": 299.0,
+      "left_x": 154.5,
+      "right_x": 508.0,
+      "center_x": 331.25
+    },
+    {
+      "y": 295.0,
+      "left_x": 157.5,
+      "right_x": 506.5,
+      "center_x": 332.0
+    },
+    {
+      "y": 291.0,
+      "left_x": 159.5,
+      "right_x": 505.0,
+      "center_x": 332.25
+    },
+    {
+      "y": 287.0,
+      "left_x": 161.5,
+      "right_x": 504.0,
+      "center_x": 332.75
+    },
+    {
+      "y": 271.0,
+      "left_x": 171.5,
+      "right_x": 499.0,
+      "center_x": 335.25
+    },
+    {
+      "y": 267.0,
+      "left_x": 173.5,
+      "right_x": 498.0,
+      "center_x": 335.75
+    },
+    {
+      "y": 263.0,
+      "left_x": 175.5,
+      "right_x": 497.0,
+      "center_x": 336.25
+    },
+    {
+      "y": 259.0,
+      "left_x": 178.5,
+      "right_x": 496.0,
+      "center_x": 337.25
+    },
+    {
+      "y": 255.0,
+      "left_x": 180.5,
+      "right_x": 495.0,
+      "center_x": 337.75
+    },
+    {
+      "y": 251.0,
+      "left_x": 183.0,
+      "right_x": 494.0,
+      "center_x": 338.5
+    },
+    {
+      "y": 247.0,
+      "left_x": 185.5,
+      "right_x": 492.5,
+      "center_x": 339.0
+    },
+    {
+      "y": 243.0,
+      "left_x": 188.0,
+      "right_x": 491.5,
+      "center_x": 339.75
+    },
+    {
+      "y": 239.0,
+      "left_x": 190.5,
+      "right_x": 490.5,
+      "center_x": 340.5
+    },
+    {
+      "y": 235.0,
+      "left_x": 193.0,
+      "right_x": 489.5,
+      "center_x": 341.25
+    },
+    {
+      "y": 231.0,
+      "left_x": 195.5,
+      "right_x": 488.0,
+      "center_x": 341.75
+    },
+    {
+      "y": 227.0,
+      "left_x": 198.0,
+      "right_x": 487.0,
+      "center_x": 342.5
+    },
+    {
+      "y": 223.0,
+      "left_x": 200.5,
+      "right_x": 486.0,
+      "center_x": 343.25
+    },
+    {
+      "y": 219.0,
+      "left_x": 203.0,
+      "right_x": 485.0,
+      "center_x": 344.0
+    },
+    {
+      "y": 215.0,
+      "left_x": 205.5,
+      "right_x": 484.0,
+      "center_x": 344.75
+    },
+    {
+      "y": 211.0,
+      "left_x": 208.0,
+      "right_x": 483.0,
+      "center_x": 345.5
+    },
+    {
+      "y": 207.0,
+      "left_x": 210.5,
+      "right_x": 482.0,
+      "center_x": 346.25
+    },
+    {
+      "y": 203.0,
+      "left_x": 213.0,
+      "right_x": 481.0,
+      "center_x": 347.0
+    },
+    {
+      "y": 199.0,
+      "left_x": 215.5,
+      "right_x": 480.0,
+      "center_x": 347.75
+    },
+    {
+      "y": 195.0,
+      "left_x": 218.0,
+      "right_x": 479.5,
+      "center_x": 348.75
+    },
+    {
+      "y": 191.0,
+      "left_x": 221.0,
+      "right_x": 478.5,
+      "center_x": 349.75
+    }
+  ]
+}
