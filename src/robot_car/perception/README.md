@@ -1,6 +1,6 @@
 # Perception
 
-**Current development focus. No detector is implemented yet.**
+**Implemented:** grayscale conversion, paired white-border tracking, center estimation, and a command-line image demo. See the [perception guide](../../../docs/perception.md) for the actual input/output contract and limitations. Object detectors below remain planned.
 
 Input: the vehicle's local camera image and a timestamp. Preserve the original color image; grayscale is a derived image for lane processing.
 
