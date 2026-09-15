@@ -1,6 +1,6 @@
 # Validation Plan
 
-Tests will be added alongside the implementation, not as empty passing placeholders.
+Run `python -m pytest` from the repository root after installing the test extra. `test_lane.py` validates independently constructed lane geometry, offsets, curves, crossing interference, resolutions, noise, illumination thresholds, missing evidence, input validation, and command-line artifacts. Object recognition and the stages below remain planned.
 
 1. **Perception:** straight and curved roads, crossing interference, absent boundaries, color changes, and unknown signs.
 2. **Control:** error sign, time-step handling, output limits, and reset behavior.
