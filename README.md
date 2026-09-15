@@ -2,7 +2,26 @@
 
 A reconstruction of a robot car project I built in secondary school, focusing on visual line following, PID steering, and traffic-sign recognition.
 
-**Status:** Project layers and a course concept are in place. Current focus: visual lane perception. Functional code, tests, and driving demonstrations are not yet available.
+**Status:** The first perception baseline is runnable: grayscale conversion, two white-border extraction, and road-center estimation. Includes synthetic image fixtures, diagnostic overlays, and automated tests. Control, traffic recognition, and driving simulation are planned.
+
+## Run the Perception Demo
+
+Requires Python 3.10 or newer. From the repository root:
+
+```bash
+python -m venv .venv
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+# macOS / Linux: source .venv/bin/activate
+python -m pip install -e ".[test]"
+python -m robot_car.perception.demo --fixture crossing --output runs/crossing
+python -m pytest
+```
+
+The output directory contains the input, grayscale image, threshold mask, observed lane pixels, overlay, and `result.json`. Try `--fixture straight`, `curve`, or `missing`; use `--image path/to/frame.png` for your own local camera image. Settings can be loaded with `--config configs/perception.json`.
+
+![Lane detection on a synthetic local road view](docs/examples/overlay.png)
+
+Cyan and orange points mark observed borders; magenta points mark their midpoint. This example is a generated local image, separate from the course concept below. See [the perception guide](docs/perception.md) for the algorithm, output conventions, and limitations.
 
 ## Background
 
@@ -20,7 +39,7 @@ AI-generated planning reference, not a calibrated map or a photograph of the ori
 
 ```text
 assets/concepts/           Approved course image and provenance
-configs/                   Future detector, control, and scenario settings
+configs/                   Perception settings; future control settings
 docs/architecture.md       Data flow, boundaries, and development order
 src/robot_car/
     perception/            Lane, crossing, light, and sign detection
@@ -28,10 +47,10 @@ src/robot_car/
     control/               PID steering and speed commands
     simulation/            Vehicle model, scene, and camera rendering
     visualization/         Overlays and diagnostics
-tests/                     Validation plan; tests follow implementation
+tests/                     Perception geometry, failure, and CLI tests
 ```
 
-Each layer currently contains a README defining its responsibility. Start with [perception](src/robot_car/perception/README.md); see the [architecture guide](docs/architecture.md) for interfaces and staged development.
+Each layer contains a README defining its responsibility. Perception, diagnostic visualization, and static image fixtures now have code. See the [architecture guide](docs/architecture.md) for interfaces and staged development.
 
 ## Planned Scope
 
@@ -67,8 +86,8 @@ Camera frame / recorded video / simulated view
 
 - [x] Initialize the repository and document the reconstruction scope.
 - [x] Add the course concept and define implementation layers.
-- [ ] Select reusable libraries and appropriately licensed input materials.
-- [ ] Build a reproducible line-following perception demo.
+- [x] Select reusable libraries and appropriately licensed input materials.
+- [x] Build a reproducible line-following perception demo.
 - [ ] Implement and test the PID controller.
 - [ ] Integrate a simple vehicle simulation and evaluate tracking behavior.
 - [ ] Add crossing, traffic-light, and sign recognition, then a behavior state machine.
@@ -76,4 +95,4 @@ Camera frame / recorded video / simulated view
 
 ## Attribution
 
-External libraries, reused code, and datasets will be credited with their sources and applicable licenses when added. Newly implemented components will be distinguished from reused components.
+This reconstruction uses OpenCV and NumPy. The lane-pairing algorithm and synthetic fixtures are newly written for this repository; no third-party source snippets or datasets are bundled. See [THIRD_PARTY.md](THIRD_PARTY.md) for sources and licenses.

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vision-guided-robot-car"
+version = "0.1.0"
+description = "Layered robot-car rebuild: visual lane perception baseline"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "opencv-python-headless>=4.10,<5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+robot-car-perception = "robot_car.perception.demo:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["robot_car*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
