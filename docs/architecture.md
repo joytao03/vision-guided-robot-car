@@ -2,7 +2,7 @@
 
 ## Status
 
-The first perception baseline, static synthetic image fixtures, diagnostic overlays, and tests are implemented. Behavior, control, object recognition, and a dynamic vehicle simulator remain planned. Static fixture generation is not a closed-loop simulation.
+The first perception baseline, static synthetic image fixtures, diagnostic overlays, and tests are implemented. The independent steering PID is also implemented. Behavior, object recognition, and a dynamic vehicle simulator remain planned. Static fixture generation is not a closed-loop simulation.
 
 The implemented `LaneResult` contract contains observed border pairs and centers, explicit validity, support coverage, and image-space error. See [perception details](perception.md). Coverage is not a calibrated confidence score.
 
@@ -52,3 +52,7 @@ Missing detections must be explicit. Establish one coordinate convention, timest
 6. **Robustness and demonstration:** vary conditions, record results, and publish reproducible run instructions.
 
 The first deliverable is a perception result, not an autonomous-driving claim. Update the root roadmap only after each stage has been implemented and checked.
+
+## Implemented Control Contract
+
+`SteeringPID.update_lane(lane, dt)` accepts the perception result through a structural interface. It returns normalized right-positive steering, a stop request, status, and individual PID terms. See [control details](control.md). A future adapter handles actuator units, speed, observation freshness, and stop enforcement.
