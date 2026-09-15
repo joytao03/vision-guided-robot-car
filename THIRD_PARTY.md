@@ -12,3 +12,5 @@ The reconstruction uses public libraries through their APIs. No third-party sour
 API references: [OpenCV image thresholding](https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html) and [image smoothing](https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html).
 
 The scanline pairing, validity checks, fixtures, tests, and layer integration are newly written for this reconstruction. They are not recovered code from the original school project. The course-concept image has separate [provenance notes](assets/concepts/README.md). Future source reuse should record the exact upstream source, license, and modifications here and retain any required notices.
+
+The steering PID, anti-windup logic, perception adapter, and controller tests are newly written for this repository using the standard discrete PID formulation. No external PID source code is copied and no additional runtime dependency is required.

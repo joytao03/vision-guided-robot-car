@@ -2,7 +2,7 @@
 
 A reconstruction of a robot car project I built in secondary school, focusing on visual line following, PID steering, and traffic-sign recognition.
 
-**Status:** The first perception baseline is runnable: grayscale conversion, two white-border extraction, and road-center estimation. Includes synthetic image fixtures, diagnostic overlays, and automated tests. Control, traffic recognition, and driving simulation are planned.
+**Status:** The first perception baseline is runnable: grayscale conversion, two white-border extraction, and road-center estimation. Includes synthetic image fixtures, diagnostic overlays, and automated tests. A simulator-independent steering PID is also implemented and tested. Traffic recognition and driving simulation are planned.
 
 ## Run the Perception Demo
 
@@ -50,7 +50,7 @@ src/robot_car/
 tests/                     Perception geometry, failure, and CLI tests
 ```
 
-Each layer contains a README defining its responsibility. Perception, diagnostic visualization, and static image fixtures now have code. See the [architecture guide](docs/architecture.md) for interfaces and staged development.
+Each layer contains a README defining its responsibility. Perception, PID control, diagnostic visualization, and static image fixtures now have code. See the [architecture guide](docs/architecture.md) for interfaces and staged development.
 
 ## Planned Scope
 
@@ -88,7 +88,7 @@ Camera frame / recorded video / simulated view
 - [x] Add the course concept and define implementation layers.
 - [x] Select reusable libraries and appropriately licensed input materials.
 - [x] Build a reproducible line-following perception demo.
-- [ ] Implement and test the PID controller.
+- [x] Implement and test the PID controller (initial gains only; closed-loop tuning pending).
 - [ ] Integrate a simple vehicle simulation and evaluate tracking behavior.
 - [ ] Add crossing, traffic-light, and sign recognition, then a behavior state machine.
 - [ ] Publish setup instructions, a demonstration, and measured results.
@@ -96,3 +96,7 @@ Camera frame / recorded video / simulated view
 ## Attribution
 
 This reconstruction uses OpenCV and NumPy. The lane-pairing algorithm and synthetic fixtures are newly written for this repository; no third-party source snippets or datasets are bundled. See [THIRD_PARTY.md](THIRD_PARTY.md) for sources and licenses.
+
+## Steering Control
+
+The [PID guide](docs/control.md) describes the independent control module, initial gains in `configs/control.json`, and the perception adapter. Defaults are `Kp=0.5`, `Ki=0`, `Kd=0`; these are untuned starting values. Positive steering requests a right turn. Stop requests must be enforced by the future simulator/hardware adapter.
