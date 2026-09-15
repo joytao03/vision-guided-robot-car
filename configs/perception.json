@@ -1,0 +1,14 @@
+{
+  "white_threshold": 190,
+  "roi_top": 0.40,
+  "roi_bottom": 0.95,
+  "sample_step": 4,
+  "max_marking_width": 0.045,
+  "min_lane_width": 0.16,
+  "max_lane_width": 0.95,
+  "tracking_margin": 0.045,
+  "max_gap_rows": 8,
+  "min_coverage": 0.55,
+  "min_vertical_span": 0.32,
+  "reference_y": 0.85
+}
