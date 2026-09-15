@@ -8,3 +8,5 @@ Run `python -m pytest` from the repository root after installing the test extra.
 4. **Integration:** deterministic closed-loop runs measuring tracking error and checking stop/slow behavior.
 
 Use independently specified expected results and keep simulator truth available only to evaluation. The concept image is not a labeled benchmark.
+
+`test_pid.py` covers numeric P/I/D terms, variable time steps, direction, output and integral limits, anti-windup, stops and recovery, invalid configuration, overflow, and the perception adapter. The combined suite has 54 passing tests; this does not establish closed-loop driving performance.
