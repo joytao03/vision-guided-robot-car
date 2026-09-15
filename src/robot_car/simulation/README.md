@@ -1,6 +1,6 @@
 # Simulation
 
-**Planned.** Owns road geometry, vehicle state, traffic-light timing, signs, and camera rendering.
+**Implemented:** `fixtures.py` renders static local road images for the perception demo. A dynamic simulator remains planned and will own road geometry, vehicle state, traffic-light timing, signs, and camera rendering.
 
 The initial course will have gray road, continuous white edge lines, green surroundings, a zebra crossing, traffic lights, and a school-warning sign. The approved [concept image](../../../assets/concepts/track-concept-v1.png) is a visual reference, not a calibrated map or working simulator.
 
