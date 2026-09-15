@@ -2,7 +2,9 @@
 
 ## Status
 
-Repository structure and a visual course concept are available. Functional perception, control, behavior, simulation, and visualization are not implemented yet.
+The first perception baseline, static synthetic image fixtures, diagnostic overlays, and tests are implemented. Behavior, control, object recognition, and a dynamic vehicle simulator remain planned. Static fixture generation is not a closed-loop simulation.
+
+The implemented `LaneResult` contract contains observed border pairs and centers, explicit validity, support coverage, and image-space error. See [perception details](perception.md). Coverage is not a calibrated confidence score.
 
 ## Data Flow
 
